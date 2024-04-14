@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: 'Arial', sans-serif;
+        background-color: whitesmoke;
+        color: black;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .box {
+        background-color: white;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .color {
+        color: dodgerblue;
+      }
+
+      .font-size {
+        font-size: 24px;
+      }
+
+      .font-family {
+        font-family: 'Courier New', Courier, monospace;
+      }
+
+      .text-align {
+        text-align: center;
+      }
+
+      .line-height {
+        line-height: 2;
+      }
+
+      .letter-spacing {
+        letter-spacing: 3px;
+      }
+
+      .border {
+        border: 3px solid dodgerblue;
+      }
+
+      .margin {
+        margin: 20px;
+      }
+
+      .padding {
+        padding: 30px;
+      }
+
+      .width-height {
+        width: 50%;
+        height: 150px;
+        background-color: orangered;
+        color: white;
+      }
+
+      .position {
+        position: relative;
+        top: 15px;
+        left: 15px;
+      }
+
+      .transition {
+        background-color: limegreen;
+        color: white;
+        cursor: pointer;
+      }
+
+      .transition:hover {
+        background-color: green;
+        transition: background-color 0.5s ease;
+      }
+
+      .transform:hover {
+        transform: translateY(-5px);
+        transition: transform 0.3s ease;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!--  Text -->
+      <div class="box color">Colored text</div>
+      <div class="box font-size">Font size</div>
+      <div class="box font-family">Font family</div>
+      <div class="box text-align">Centered text</div>
+      <div class="box line-height">
+        Line height affects the space between lines.
+      </div>
+      <div class="box letter-spacing">Letter spacing</div>
+      <!--  Container (Box Model) -->
+      <div class="box border">Border</div>
+      <div class="box margin">Margin</div>
+      <div class="box padding">Padding</div>
+      <!--  Size & Position -->
+      <div class="box width-height">Width & Height</div>
+      <div class="box position">Relative position</div>
+      <!-- Transition -->
+      <div class="box transition">Hover for transition</div>
+      <div class="box transform">Hover for transform</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* Global Styles */
+      body {
+        font-family: 'Arial', sans-serif;
+        background-color: whitesmoke;
+        padding: 20px;
+        line-height: 1.6;
+      }
+
+      /* Element selector (least specific) */
+      div {
+        border: 1px solid lightgrey;
+        margin: 15px 0;
+        padding: 15px;
+        border-radius: 5px;
+        background-color: white;
+        color: darkgrey;
+      }
+
+      /* Class selector (more specific than element selector) */
+      .highlight {
+        color: black;
+      }
+
+      /* Same Class, Cascade (later rule overrides) */
+      .highlight {
+        color: red;
+      }
+
+      /* !important can override anything that doesn't already have !important */
+      /* .highlight {
+  color: purple !important;
+} */
+
+      /* ID selector (more specific than class) */
+      #special1,
+      #special2 {
+        font-weight: bold;
+        color: green;
+      }
+
+      /* Inline style will be the most specific (added directly to the HTML) */
+    </style>
+  </head>
+  <body>
+    <div id="example1">This is a DIV (styled by element selector).</div>
+
+    <div class="highlight" id="example2">
+      This is a DIV with a class of "highlight". The class tries to change its
+      color to red.
+    </div>
+
+    <div id="special1" class="highlight">
+      This is a DIV with an ID of "special1" and a class of "highlight". The
+      ID's styling is more specific, so the color will be green, not red.
+    </div>
+
+    <div id="special2" class="highlight" style="color: blue">
+      This is a DIV with inline styling, an ID of "special2", and a class of
+      "highlight". The inline style is the most specific, so the color will be
+      blue.
+    </div>
+  </body>
+</html>

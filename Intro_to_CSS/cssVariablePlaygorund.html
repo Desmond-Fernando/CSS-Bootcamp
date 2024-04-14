@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+        --font-size: 16px;
+        --font-color: #000000;
+        --background-color: #ffffff;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .playground {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .preview {
+        width: 60%;
+        background-color: var(--background-color);
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+      .demo-text {
+        font-size: var(--font-size);
+        color: var(--font-color);
+      }
+
+      .controls {
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      label {
+        margin-bottom: 5px;
+      }
+
+      input {
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>CSS Variables Playground</h1>
+      <div class="playground">
+        <div class="preview">
+          <p class="demo-text">This is a demo text.</p>
+        </div>
+        <div class="controls">
+          <label for="font-size">Font size:</label>
+          <input type="range" id="font-size" min="10" max="72" value="16" />
+
+          <label for="font-color">Font color:</label>
+          <input type="color" id="font-color" value="#000000" />
+
+          <label for="background-color">Background color:</label>
+          <input type="color" id="background-color" value="#ffffff" />
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const fontSizeControl = document.getElementById('font-size');
+      const fontColorControl = document.getElementById('font-color');
+      const backgroundColorControl =
+        document.getElementById('background-color');
+
+      fontSizeControl.addEventListener('input', function () {
+        document.documentElement.style.setProperty(
+          '--font-size',
+          this.value + 'px'
+        );
+      });
+
+      fontColorControl.addEventListener('input', function () {
+        document.documentElement.style.setProperty('--font-color', this.value);
+      });
+
+      backgroundColorControl.addEventListener('input', function () {
+        document.documentElement.style.setProperty(
+          '--background-color',
+          this.value
+        );
+      });
+    });
+  </script>
+</html>

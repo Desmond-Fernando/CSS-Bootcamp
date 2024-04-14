@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        padding: 2rem;
+        line-height: 1.6;
+      }
+
+      div,
+      p,
+      a,
+      ul {
+        border: 1px solid #e1e1e1;
+        margin: 15px 0;
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      }
+
+      a {
+        display: inline-block;
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .intro {
+        background-color: #eaf7fe; /* Blue */
+      }
+
+      .name1.name2 {
+        background-color: #ffdad9; /* Red */
+      }
+
+      .name1 .name2 {
+        background-color: #fef9d9; /* Yellow */
+      }
+
+      #firstname {
+        background-color: #dafadc; /* Green */
+      }
+
+      p {
+        background-color: #e6e2fe; /* Purple */
+      }
+
+      p.intro {
+        font-weight: bold;
+      }
+
+      div,
+      p {
+        color: #555;
+      }
+
+      div p {
+        text-decoration: underline;
+      }
+
+      div > p {
+        font-style: italic;
+      }
+
+      div + p {
+        text-transform: uppercase;
+        font-size: 0.9rem;
+      }
+
+      p ~ ul {
+        list-style-type: square;
+        margin-left: 20px;
+      }
+
+      [target] {
+        color: #007bff; /* Blue */
+      }
+
+      [target='_blank'] {
+        font-weight: 500;
+      }
+
+      [title~='flower'] {
+        background-color: #fff5e1; /* Yellow */
+      }
+
+      [lang|='en'] {
+        font-family: 'Courier New', Courier, monospace;
+      }
+
+      a[href^='https'] {
+        color: #28a745; /* Green */
+      }
+
+      a[href$='.pdf'] {
+        font-size: 1.2em;
+        background-color: #fff3cd; /* Yellow */
+        border: 1px solid #ffeeba; /* Yellow */
+      }
+
+      a[href*='w3schools'] {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="intro">Div with class "intro"</div>
+    <div class="name1 name2">Div with both "name1" and "name2" class</div>
+    <div class="name1">
+      <div class="name2">Child div with "name2" inside parent div "name1"</div>
+    </div>
+    <div id="firstname">Div with id "firstname"</div>
+    <p>P element</p>
+    <p class="intro">P element with class "intro"</p>
+    <div>Div element</div>
+    <p>P element under a div</p>
+    <div>
+      <p>P element inside a div</p>
+    </div>
+    <div>Another div</div>
+    <p>First P element right after a div</p>
+    <ul>
+      <li>Item 1</li>
+    </ul>
+    <p>A P element preceding a UL</p>
+    <ul>
+      <li>Item 2</li>
+    </ul>
+    <a href="#" target="_blank">Link with target="_blank"</a>
+    <div title="rose flower">Div with title containing "flower"</div>
+    <div lang="en-US">Div with lang starting with "en"</div>
+    <a href="https://example.com">Link starting with "https"</a>
+    <a href="document.pdf">Link ending with ".pdf"</a>
+    <a href="https://w3schools.com">Link containing "w3schools"</a>
+  </body>
+</html>
