@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 200vh;
+        position: relative;
+      }
+
+      .nav-bar {
+        position: sticky;
+        top: 10px;
+        width: 100%;
+        background-color: #333;
+        padding: 10px 0;
+      }
+
+      .nav-bar a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 15px;
+      }
+
+      .top {
+        position: static;
+      }
+
+      .bottom {
+        position: absolute;
+        bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Review the different CSS positioning properties. Which one keeps an element in the same place, even when scrolling? -->
+    <!-- I want the navbar to stay at the top of the page -->
+    <div class="nav-bar">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <p class="top">
+      Top - Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis
+      deleniti est delectus reiciendis officia maiores minus et itaque ad
+      accusamus? Aliquam doloribus optio eum placeat sed libero numquam nesciunt
+      distinctio.
+    </p>
+
+    <p class="bottom">
+      Bottom - Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum
+      quos eum quam temporibus? Ducimus, alias fuga. Reprehenderit accusamus
+      veritatis est ipsam culpa, ullam vitae recusandae, quisquam rerum minima
+      eveniet adipisci.
+    </p>
+  </body>
+</html>

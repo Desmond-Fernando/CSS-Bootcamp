@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .main-content {
+        position: relative; /* Setting a context for the absolute positioning of the button */
+        height: 400px;
+        background-color: #e0e0e0;
+      }
+
+      .floating-btn {
+        position: absolute; /* Allows positioning in relation to the nearest positioned ancestor */
+        bottom: 10px;
+        right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- The button is positioned oddly in relation to the main content. Using the appropriate position property, place the button in the bottom-right corner of the .main-content. -->
+    <!-- I want the button to be in the bottom right corner of the main content div -->
+    <div class="main-content">
+      Main Content Here
+      <button class="floating-btn">Click Me</button>
+    </div>
+  </body>
+</html>

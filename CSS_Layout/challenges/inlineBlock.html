@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 100%;
+      }
+
+      .block1,
+      .block2 {
+        display: inline-block; /* Allows blocks to sit side-by-side */
+        width: 40%;
+        padding: 10px;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- The two blocks are stacked vertically. Consider a display value that makes elements sit side-by-side. -->
+    <!-- I want each block to appear together on the same line -->
+    <div class="container">
+      <div class="block1">Block 1</div>
+      <div class="block2">Block 2</div>
+    </div>
+  </body>
+</html>
