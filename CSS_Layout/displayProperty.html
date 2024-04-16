@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 50px;
+        background-color: whitesmoke;
+      }
+
+      .container {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        width: 80%;
+        margin: 0 auto;
+      }
+
+      .block {
+        display: block;
+        background-color: dodgerblue;
+        color: white;
+        padding: 10px;
+        margin: 20px 0;
+      }
+
+      .inline {
+        display: inline;
+        background-color: orangered;
+        color: white;
+        padding: 10px;
+      }
+
+      .inline-block {
+        display: inline-block;
+        background-color: limegreen;
+        color: white;
+        padding: 10px;
+        margin: 20px 0;
+        width: 50%;
+      }
+
+      .none {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="block">This is a block-level element</div>
+      <span class="inline">This is </span
+      ><span class="inline">an inline element.</span>
+      <div class="inline-block">This is an inline-block element</div>
+      <div class="none">
+        This element has a display set to none (You shouldn't be able to see
+        this)
+      </div>
+    </div>
+  </body>
+</html>

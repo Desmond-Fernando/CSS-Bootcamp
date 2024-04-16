@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 50px;
+        height: 200vh; /* Added extra height to demonstrate the sticky property when scrolling */
+      }
+
+      .container {
+        background-color: whitesmoke;
+        padding: 20px;
+        width: 80%;
+        margin: 0 auto;
+      }
+
+      .static,
+      .relative,
+      .absolute,
+      .fixed,
+      .sticky {
+        background-color: dodgerblue;
+        color: white;
+        padding: 10px;
+        margin: 20px 0;
+      }
+
+      .relative {
+        position: relative;
+        left: 20px;
+        top: 10px;
+      }
+
+      .container-absolute {
+        position: relative; /* To contain the absolute positioned child */
+        height: 100px;
+        background-color: lightgrey;
+      }
+
+      .absolute {
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        margin: 0;
+      }
+
+      .fixed {
+        background-color: orangered;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        margin: 0;
+        z-index: 1000; /* Ensures the fixed box is above other content */
+      }
+
+      .sticky-container {
+        height: 400px;
+        overflow: auto;
+      }
+
+      .sticky {
+        position: sticky;
+        top: 20px;
+        background-color: orangered;
+      }
+
+      .content {
+        height: 400px;
+        background-color: dodgerblue;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="static">Static (Default)</div>
+      <div class="relative">Relative (shifted 20px right and 10px down)</div>
+      <div class="container-absolute">
+        <div class="absolute">Absolute (20px from top and right)</div>
+      </div>
+      <div class="fixed">Fixed (20px from bottom)</div>
+      <div class="sticky-container">
+        <div class="sticky">
+          Sticky (sticks at 20px from top when scrolling)
+        </div>
+        <div class="content">Scroll to see sticky in action</div>
+      </div>
+    </div>
+  </body>
+</html>

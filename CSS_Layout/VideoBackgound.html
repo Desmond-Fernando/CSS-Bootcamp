@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 200vh;
+        /* font-family: Arial, Helvetica, sans-serif; */
+        position: relative;
+      }
+
+      .video-background {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        width: 100vw;
+        height: auto;
+      }
+
+      video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .overlay {
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        width: 100vw;
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+
+      h1 {
+        position: absolute;
+        top: 20%;
+        left: 34%;
+        color: white;
+        font-family: Helvetica, sans-serif;
+        font-size: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <video autoplay loop muted class="video-background">
+      <source
+        src="https://assets.mixkit.co/videos/preview/mixkit-forest-stream-in-the-sunlight-529-large.mp4"
+      />
+    </video>
+    <div class="overlay"></div>
+    <h1>Beauty of nature</h1>
+  </body>
+</html>
