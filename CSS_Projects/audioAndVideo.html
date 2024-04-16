@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: whitesmoke;
+        margin: 0;
+        text-align: center;
+      }
+
+      h1 {
+        background-color: limegreen;
+        color: white;
+        padding: 20px;
+        margin-bottom: 50px;
+      }
+
+      h2 {
+        color: limegreen;
+      }
+
+      audio,
+      video {
+        display: block;
+        width: 90%;
+        max-width: 800px;
+        margin: 20px auto;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      }
+
+      video {
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Audio and Video Embedding in HTML</h1>
+
+    <h2>Audio Example</h2>
+    <audio controls>
+      <source
+        src="https://github.com/JacintoDesign/music-player/raw/master/music/jacinto-1.mp3"
+        type="audio/mpeg"
+      />
+      Your browser does not support the audio element.
+    </audio>
+
+    <h2>Video Example</h2>
+    <video width="640" height="360" controls autoplay muted loop>
+      <source
+        src="https://assets.mixkit.co/videos/preview/mixkit-waterfall-in-forest-2213-large.mp4"
+        type="video/mp4"
+      />
+      Your browser does not support the video element.
+    </video>
+  </body>
+</html>

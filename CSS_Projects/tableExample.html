@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 50px;
+        background-color: silver;
+      }
+      table {
+        width: 100%;
+        max-width: 800px;
+        margin: 20px auto;
+        border-collapse: collapse;
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
+      }
+      table,
+      th,
+      td {
+        border: 1px solid lightgray;
+      }
+
+      caption {
+        background-color: royalblue;
+        color: white;
+        padding: 10px;
+        font-size: 22px;
+        font-weight: bold;
+      }
+      thead {
+        background-color: dodgerblue;
+        color: white;
+      }
+      th,
+      td {
+        padding: 10px 15px;
+        text-align: left;
+      }
+      tbody tr:nth-child(even) {
+        background-color: whitesmoke;
+      }
+      tbody tr:nth-child(odd) {
+        background-color: white;
+      }
+      tbody tr:hover {
+        background-color: lightyellow;
+        cursor: pointer;
+      }
+      tfoot {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <!-- Table Caption -->
+      <caption>
+        Employee Directory
+      </caption>
+
+      <!-- Table Headings -->
+      <thead>
+        <tr>
+          <th>Employee ID</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Position</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+
+      <!-- Table Body -->
+      <tbody>
+        <tr>
+          <td>001</td>
+          <td>John</td>
+          <td>Doe</td>
+          <td>Manager</td>
+          <td>j.doe@example.com</td>
+        </tr>
+        <tr>
+          <td>002</td>
+          <td>Jane</td>
+          <td>Smith</td>
+          <td>Developer</td>
+          <td>jane.smith@example.com</td>
+        </tr>
+        <tr>
+          <td>003</td>
+          <td>Alice</td>
+          <td>Johnson</td>
+          <td>Designer</td>
+          <td>alice.j@example.com</td>
+        </tr>
+        <tr>
+          <td>004</td>
+          <td>Bob</td>
+          <td>Williams</td>
+          <td>Tester</td>
+          <td>bob.w@example.com</td>
+        </tr>
+        <tr>
+          <td>005</td>
+          <td>Charlie</td>
+          <td>Brown</td>
+          <td>Analyst</td>
+          <td>charlie.b@example.com</td>
+        </tr>
+        <tr>
+          <td>006</td>
+          <td>David</td>
+          <td>Miller</td>
+          <td>Support</td>
+          <td>d.miller@example.com</td>
+        </tr>
+        <tr>
+          <td>007</td>
+          <td>Elaine</td>
+          <td>Thompson</td>
+          <td>HR</td>
+          <td>elaine.t@example.com</td>
+        </tr>
+        <tr>
+          <td>008</td>
+          <td>Frank</td>
+          <td>White</td>
+          <td>Sales</td>
+          <td>frank.w@example.com</td>
+        </tr>
+        <tr>
+          <td>009</td>
+          <td>Grace</td>
+          <td>Black</td>
+          <td>Marketing</td>
+          <td>grace.b@example.com</td>
+        </tr>
+        <tr>
+          <td>010</td>
+          <td>Henry</td>
+          <td>Jones</td>
+          <td>Intern</td>
+          <td>henry.j@example.com</td>
+        </tr>
+      </tbody>
+
+      <!-- Table Footer -->
+      <tfoot>
+        <tr>
+          <td colspan="5">Employee Directory - 2023</td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: azure;
+        margin: 0;
+      }
+
+      form {
+        background-color: white;
+        border-radius: 5px;
+        width: 450px;
+        margin: 50px auto;
+        padding: 20px;
+        box-sizing: border-box; /* makes total width to 450 rather than width + padding + margin */
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+      }
+
+      h1 {
+        margin-top: 0;
+      }
+
+      label,
+      p {
+        color: black;
+      }
+
+      input[type='text'],
+      input[type='password'],
+      input[type='number'],
+      input[type='email'],
+      input[type='color'],
+      input[type='date'],
+      select {
+        width: 100%;
+        padding: 7px;
+        border-radius: 5px;
+        border: 1px solid darkgrey;
+        box-sizing: border-box;
+        margin-bottom: 5px;
+        margin-top: 3px;
+      }
+
+      input:invalid {
+        border: 1px solid red;
+      }
+
+      input[type='color'] {
+        padding: 5px;
+        height: 40px;
+      }
+
+      input[type='file'] {
+        margin-top: 3px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+      }
+
+      input[type='radio'],
+      input[type='checkbox'] {
+        margin: 0 10px 10px 3px;
+        transform: scale(1.5);
+        cursor: pointer;
+      }
+
+      input[type='submit'] {
+        background-color: azure;
+        color: black;
+        border: 2px solid black;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        text-align: center;
+        display: block;
+        margin: auto;
+      }
+
+      input[type='submit']:hover {
+        background-color: lightskyblue;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="form">
+      <!-- Title -->
+      <h1>Job Application Form</h1>
+
+      <!-- Full Name Input -->
+      <label for="fullname">Full Name:</label><br />
+      <input type="text" id="fullname" name="fullname" required /><br />
+
+      <!-- Password Input -->
+      <label for="password">Password:</label><br />
+      <input type="password" id="password" name="password" required /><br />
+
+      <!-- Radio Input (Experience) -->
+      <p>Please select your web development experience level:</p>
+      <input
+        type="radio"
+        id="experience_0_1"
+        name="experience"
+        value="0-1 years"
+      />
+      <label for="experience_0_1">0-1 Years</label><br />
+      <input
+        type="radio"
+        id="experience_2_5"
+        name="experience"
+        value="2-5 years"
+      />
+      <label for="experience_2_5">2-5 Years</label><br />
+      <input
+        type="radio"
+        id="experience_5_plus"
+        name="experience"
+        value="5+ years"
+      />
+      <label for="experience_5_plus">5+ Years</label><br />
+
+      <!-- Checkbox Input (Hobbies) -->
+      <p>Select your hobbies:</p>
+      <input type="checkbox" id="hobby1" name="hobby" value="Biking" />
+      <label for="hobby1">Biking</label><br />
+      <input type="checkbox" id="hobby2" name="hobby" value="Reading" />
+      <label for="hobby2">Reading</label><br />
+      <input type="checkbox" id="hobby3" name="hobby" value="Travelling" />
+      <label for="hobby3">Travelling</label><br />
+
+      <!-- Dropdown Input (Country) -->
+      <label for="country">Choose a country:</label><br />
+      <select name="country" id="country">
+        <optgroup label="North America">
+          <option value="usa">United States</option>
+          <option value="canada">Canada</option>
+          <option value="mexico">Mexico</option>
+        </optgroup>
+        <optgroup label="Europe">
+          <option value="uk">United Kingdom</option>
+          <option value="germany">Germany</option>
+          <option value="france">France</option>
+        </optgroup>
+        <optgroup label="Oceania">
+          <option value="australia">Australia</option>
+          <option value="new_zealand">New Zealand</option>
+        </optgroup></select
+      ><br />
+
+      <!-- Number Input (AI experience) -->
+      <label for="ai_experience">Experience with AI (in years):</label><br />
+      <input
+        type="number"
+        id="ai_experience"
+        name="ai_experience"
+        min="0"
+        required
+      /><br />
+
+      <!-- Email Input -->
+      <label for="email">Enter your email:</label><br />
+      <input type="email" id="email" name="email" required /><br />
+
+      <!-- Color Input -->
+      <label for="favcolor">Favorite Color:</label><br />
+      <input type="color" id="favcolor" name="favcolor" value="#ff0000" /><br />
+
+      <!-- File Input (Resume) -->
+      <label for="file">Upload Resume (PDF):</label><br />
+      <input type="file" id="file" name="file" accept=".pdf" required /><br />
+
+      <!-- Date Input -->
+      <label for="birthday">Enter your birthday:</label><br />
+      <input type="date" id="birthday" name="birthday" required /><br /><br />
+
+      <!-- Submit Button -->
+      <input type="submit" value="Submit Application" />
+    </form>
+    <script>
+      let form = document.getElementById('form');
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        // Get all the necessary inputs by their IDs
+        let fullname = document.getElementById('fullname');
+        let password = document.getElementById('password');
+        let experienceInputs = document.querySelectorAll(
+          "input[name='experience']"
+        );
+        let country = document.getElementById('country');
+        let ai_experience = document.getElementById('ai_experience');
+        let email = document.getElementById('email');
+        let favcolor = document.getElementById('favcolor');
+        let file = document.getElementById('file');
+        let birthday = document.getElementById('birthday');
+
+        // Checking if any of the radio buttons (experience) is selected
+        let experienceSelected = Array.from(experienceInputs).some(
+          (input) => input.checked
+        );
+
+        // Check if every field has a value
+        if (
+          fullname.value &&
+          password.value &&
+          experienceSelected &&
+          country.value &&
+          ai_experience.value &&
+          email.value &&
+          favcolor.value &&
+          file.value &&
+          birthday.value
+        ) {
+          alert(
+            `Congratulations on applying ${fullname.value}, we will be in contact soon!`
+          );
+        } else {
+          alert('Please ensure that you add value for every input');
+        }
+      });
+    </script>
+  </body>
+</html>
